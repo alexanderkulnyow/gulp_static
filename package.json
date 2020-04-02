@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/alexanderkulnyow/gulp_static/issues"
   },
-  "homepage": "https://github.com/alexanderkulnyow/gulp_static#readme"
+  "homepage": "https://github.com/alexanderkulnyow/gulp_static#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  },
+  "dependencies": {
+    "sass": "^1.26.3"
+  }
 }

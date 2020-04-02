@@ -1,1 +1,1 @@
-hello world!
+Gulp Static 
