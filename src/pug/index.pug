@@ -8,8 +8,40 @@ link(type='text/plain' rel="author" href="humans.txt")
 link(rel="manifest" href="site.webmanifest")
 link(rel="stylesheet" href="css/style.css")
 body
-    header.container
-        h1 Привет МИР
-    main.container
-        h2 контент1
-    include footer
+    header
+        nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+            .container
+                a.navbar-brand(href="#") Navbar
+                button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarsExample07"
+                    aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation")
+                    span.navbar-toggler-icon
+
+                #navbarsExample07.collapse.navbar-collapse
+                    ul.navbar-nav.mr-auto
+                        li.nav-item.active
+                            a.nav-link(href="#") Home
+                                span.sr-only (current)
+                        li.nav-item
+                            a.nav-link(href="#") Link
+                        li.nav-item
+                            a.nav-link.disabled(href="#") Disabled
+                        li.nav-item.dropdown
+                            a#dropdown07.nav-link.dropdown-toggle(href="#" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false") Dropdown
+                            .dropdown-menu(aria-labelledby="dropdown07")
+                                a.dropdown-item(href="#") Action
+                                a.dropdown-item(href="#") Another action
+                                a.dropdown-item(href="#") Something else here
+
+                    form.form-inline.my-2.my-md-0
+                        input.form-control(ype="text" placeholder="Search" aria-label="Search")
+
+    .jumbotron
+        .container
+            h1.display-3 Заголовок 1
+            p This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.
+    main(role="main")
+
+    include _footer
+
+    script(src="js/index.min.js")

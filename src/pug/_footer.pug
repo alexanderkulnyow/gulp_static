@@ -1,0 +1,16 @@
+mixin features_list (Header, ...names)
+    .col-6.col-md
+        h5= Header
+        ul.list-unstyled.text-small
+            each name in names
+                li
+                    a.text-muted(href='#')= name
+footer.container
+    .pt-4.my-md-5.pt-md-5.border-top
+        .row
+            .col-12.col-md
+                img.mb-2(src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="24" height="24")
+            +features_list('Features', 'Cool stuff', 'Random feature', 'Team feature', 'Stuff for developers', 'Another one', 'Last time')
+            +features_list('Resources', 'Cool stuff', 'Random feature', 'Team feature', 'Stuff for developers', 'Another one', 'Last time')
+            +features_list('About', 'Cool stuff', 'Random feature', 'Team feature', 'Stuff for developers', 'Another one', 'Last time')
+

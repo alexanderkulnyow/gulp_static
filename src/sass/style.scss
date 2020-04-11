@@ -1,0 +1,36 @@
+//Abstract
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins',
+  'abstracts/placeholders';
+//Base
+@import
+  'base/reset',
+  'base/colors',
+  'base/typography';
+//Vendors
+@import
+'../../node_modules/bootstrap/scss/bootstrap';
+//Layout
+@import
+  'layout/navigation',
+  'layout/grid',
+  'layout/header',
+  'layout/footer',
+  'layout/sidebar',
+  'layout/forms';
+//Components
+@import
+  //'components/buttons',
+  'components/carousel',
+  'components/cover',
+  'components/dropdown';
+//pages
+@import
+  'pages/home',
+  'pages/contact';
+//themes
+@import
+  'themes/theme',
+  'themes/admin';
