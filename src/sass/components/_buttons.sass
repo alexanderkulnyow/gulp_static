@@ -1,0 +1,65 @@
+.btn
+
+
+  &:hover
+    text-decoration: none
+  &:focus,
+  &.focus
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active
+
+    &:focus
+
+
+// Future-proof disabling of clicks on `<a>` elements
+a.btn.disabled,
+fieldset:disabled a.btn
+  pointer-events: none
+
+
+//
+// Link buttons
+//
+
+// Make a button look and behave like a link
+.btn-link
+
+  &:hover
+
+  &:focus,
+  &.focus
+
+  &:disabled,
+  &.disabled
+
+//
+// Button Sizes
+//
+
+.btn-lg
+
+.btn-sm
+
+
+//
+// Block button
+//
+
+.btn-block
+
+  // Vertically space out multiple block buttons
+  + .btn-block
+
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"]
+  &.btn-block
+    width: 100%
+
+

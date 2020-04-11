@@ -1,0 +1,20 @@
+# TEAM
+
+  Front-end: Alexander Kulnyow
+  Twitter: @alexkulnyow
+  Telegram: https://t.me/alexanderkulnyow
+  e-mail: alexanderkulnyow@yahoo.com
+  From: Vitebsk, Belarus.
+
+# THANKS
+
+
+# TECHNOLOGY
+
+# SITE
+	Last update:2018/05/15
+	Language: Russian
+	Standards: CSS3, HTML5
+	Components: Apache Server Configs, jQuery, Modernizr, Normalize.css
+	Doctype: HTML5
+	Software: Phpstorm, Adobe XD, Photoshop

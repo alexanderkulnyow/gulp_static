@@ -1,0 +1,13 @@
+mixin features_list(name)
+    li
+        a.text-muted(href='#') = name
+footer.container
+    .pt-4.my-md-5.pt-md-5.border-top
+        .row
+            .col-12.col-md
+                img.mb-2(src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="24" height="24")
+            .col-6.col-md
+                h5 Features
+
+                ul.list-unstyled.text-small
+                    +features_list('Cool stuff')
