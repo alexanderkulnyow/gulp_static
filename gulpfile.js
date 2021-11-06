@@ -19,8 +19,8 @@ const
 const
     path = {
         project: './',
-        nopug: '!src/pug/**/_*.pug',
-        pug: 'src/pug/**/*.pug',
+        pug: 'src/pug/index.pug',
+        pugreload: 'src/pug/**/*.pug',
         css: 'css/',
         sass: 'src/sass/*.scss',
         js: 'src/js/**/*.js',
@@ -51,7 +51,7 @@ function css() {
         .pipe(nano())
         .pipe(sourcemaps.write('.'))
         .pipe(dest(path.css))
-};
+}
 
 function browserSync() {
     browserReload.init(
@@ -65,16 +65,16 @@ function browserSync() {
             files: [path.pug, path.sass, path.js],
             port: 3002,
             https: {
-                key: "../../../userdata/config/cert_files/server.key",
-                cert: "../../../userdata/config/cert_files/server.crt",
+                // key: "../../../userdata/config/cert_files/server.key",
+                // cert: "../../../userdata/config/cert_files/server.crt",
             },
             notify: false
         }
     );
-};
+}
 
 function buildHTML() {
-    return src(path.pug, path.nopug)
+    return src(path.pug)
         .pipe(plumber({
             errorHandler: function (err) {
                 console.log(err.message);
@@ -88,7 +88,7 @@ function buildHTML() {
         ))
         .pipe(dest(path.project))
     // .pipe(browsersync.reload({stream: true}));
-};
+}
 
 function scripts() {
     src(path.js)
@@ -102,17 +102,17 @@ function scripts() {
         .pipe(sourcemaps.init())
         .pipe(include())
         .on('error', console.log)
-        .pipe(sourcemaps.write('.'))
         .pipe(rename('index.min.js'))
+        .pipe(sourcemaps.write('.'))
         .pipe(dest(path.bundle)) // Выгружаем в папку app/js
-};
+}
 
 function stream() {
     watch(path.sass, parallel(css))
-    watch(path.pug, parallel(buildHTML))
+    watch(path.pugreload, parallel(buildHTML))
     watch(path.js, parallel(scripts))
 
-};
+}
 
 exports.browserReload = browserSync;
 exports.css = css;
